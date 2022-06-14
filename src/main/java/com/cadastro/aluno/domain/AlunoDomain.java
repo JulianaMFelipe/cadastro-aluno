@@ -4,29 +4,29 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "aluno")
+@Table(name = "tbAluno")
 public class AlunoDomain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idAluno;
 
-    @Column(name = "nome")
+    @Column(length = 130)
     private String nome;
 
-    @Temporal(TemporalType.DATE)
+    @Column
     private LocalDate dataNascimento;
 
-    @Column
+    @Column(length = 11)
     private String cpf;
 
-    @Column
+    @Column(length = 10)
     private String rg;
 
     @Column
     private Integer periodo;
 
-    @Column
+    @Column(length = 130)
     private String curso;
 
 //    private Endereco endereco;

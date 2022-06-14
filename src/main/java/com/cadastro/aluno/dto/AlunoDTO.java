@@ -9,7 +9,7 @@ public class AlunoDTO {
     private String rg;
     private Integer periodo;
     private String curso;
-    private Endereco endereco;
+//    private Endereco endereco;
 
     public String getNome() {
         return nome;
@@ -59,11 +59,11 @@ public class AlunoDTO {
         this.curso = curso;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
+//    public Endereco getEndereco() {
+//        return endereco;
+//    }
+//
+//    public void setEndereco(Endereco endereco) {
+//        this.endereco = endereco;
+//    }
 }

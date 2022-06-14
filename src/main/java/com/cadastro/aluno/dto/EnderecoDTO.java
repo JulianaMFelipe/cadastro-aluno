@@ -1,6 +1,6 @@
-package com.cadastro.aluno.domain;
+package com.cadastro.aluno.dto;
 
-public class Endereco {
+public class EnderecoDTO {
     private String cep;
     private String logradouro;
     private String numero;
