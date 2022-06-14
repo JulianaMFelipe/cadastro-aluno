@@ -1,4 +1,4 @@
-package com.cadastro.aluno.dto.controller;
+package com.cadastro.aluno.controller;
 
 import com.cadastro.aluno.domain.AlunoDomain;
 import com.cadastro.aluno.dto.AlunoDTO;
