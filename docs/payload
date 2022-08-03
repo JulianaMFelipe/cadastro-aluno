@@ -1,0 +1,17 @@
+{
+    "nome": "Paula",
+    "dataNascimento": "1987-12-19",
+    "cpf": "12345678900",
+    "rg": "1234567",
+    "periodo": 3,
+    "curso": "Farmacia",
+    "endereco": {
+        "cep": "12345678",
+        "logradouro": "rua t-14",
+        "numero": "1565",
+        "bairro": "bueno",
+        "complemento": "de frente para o carrefour",
+        "estado": "GO",
+        "cidade": "Goiania"
+    }
+}

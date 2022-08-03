@@ -1,6 +1,6 @@
 create database cadastroAluno
 
-create table aluno(
+create table tb_aluno(
 	idAluno integer auto_increment primary key not null,
 	nome varchar(50) not null,
 	dataNascimento date not null,
@@ -14,7 +14,7 @@ select * from aluno a
 
 use cadastroAluno;
 
-create table endereco(
+create table tb_endereco(
 	idEndereco integer auto_increment primary key not null,
 	idAluno integer not null,
 	cep varchar(8) not null,

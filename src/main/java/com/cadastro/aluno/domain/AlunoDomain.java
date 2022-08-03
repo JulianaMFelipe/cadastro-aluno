@@ -1,23 +1,30 @@
 package com.cadastro.aluno.domain;
 
+import org.hibernate.validator.constraints.br.CPF;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "tbAluno")
+@Table(name = "tb_aluno")
 public class AlunoDomain {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idAluno;
 
-    @Column(length = 130)
+    @OneToOne(cascade=CascadeType.PERSIST)
+    @JoinColumn(name = "endereco")
+    private EnderecoDomain endereco;
+
+    @Column(length = 50)
     private String nome;
 
     @Column
     private LocalDate dataNascimento;
 
     @Column(length = 11)
+    @CPF
     private String cpf;
 
     @Column(length = 10)
@@ -26,17 +33,23 @@ public class AlunoDomain {
     @Column
     private Integer periodo;
 
-    @Column(length = 130)
+    @Column(length = 50)
     private String curso;
 
-//    private Endereco endereco;
-
-    public Integer getIdAluno() {
+    public Integer getId() {
         return idAluno;
     }
 
     public void setIdAluno(Integer idAluno) {
         this.idAluno = idAluno;
+    }
+
+    public EnderecoDomain getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(EnderecoDomain endereco) {
+        this.endereco = endereco;
     }
 
     public String getNome() {
@@ -86,12 +99,4 @@ public class AlunoDomain {
     public void setCurso(String curso) {
         this.curso = curso;
     }
-
-//    public Endereco getEndereco() {
-//        return endereco;
-//    }
-//
-//    public void setEndereco(Endereco endereco) {
-//        this.endereco = endereco;
-//    }
 }
