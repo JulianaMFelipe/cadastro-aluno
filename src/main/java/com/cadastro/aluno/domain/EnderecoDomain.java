@@ -3,7 +3,7 @@ package com.cadastro.aluno.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tb_andereco")
+@Table(name = "tb_endereco")
 public class EnderecoDomain {
 
     @Id
