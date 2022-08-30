@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class EnderecoDomain {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idEndereco;
 
     @OneToOne(mappedBy = "endereco")
