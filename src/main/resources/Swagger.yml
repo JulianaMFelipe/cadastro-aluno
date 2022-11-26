@@ -1,0 +1,95 @@
+openapi: 3.0.3
+info:
+  title: Swagger Aluno - OpenAPI 3.0
+  description: API para Cadastro de aluno
+  version: 1.0.11
+tags:
+  - name: alunos
+paths:
+  /cadastrar-aluno:
+    post:
+      tags:
+        - alunos
+      requestBody:
+        description: Cadastro de novo aluno
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Aluno'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Aluno'
+        '405':
+          description: Invalid input
+  /recuperar-aluno:
+    get:
+      tags:
+        - alunos
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Aluno'
+        '500':
+          description: Internal Server Error
+components:
+  schemas:
+    Aluno:
+      type: object
+      properties:
+        nome:
+          type: string
+          example: 'Joao'
+        dataNascimento:
+          type: string
+          format: date-time
+          example: '1987-12-19'
+        cpf:
+          type: string
+          example: '12312312312'
+        rg:
+          type: string
+          example: '1212122'
+        periodo:
+          type: integer
+          format: int64
+          example: 2
+        curso:
+          type: string
+          example: 'agronomia'
+        endereco:
+          type: object
+          $ref: '#/components/schemas/Endereco'
+    Endereco:
+      type: object
+      properties:
+        cep:
+          type: string
+          example: '12123123'
+        logradouro:
+          type: string
+          example: 'rua Palmeiras'
+        numero:
+          type: string
+          example: '1212'
+        bairro:
+          type: string
+          example: 'das flores'
+        complemento:
+          type: string
+          example: 'no final da rua'
+        estado:
+          type: string
+          example: 'SP'
+        cidade:
+          type: string
+          example: 'Sao Paulo'

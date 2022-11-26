@@ -1,7 +1,7 @@
 {
     "nome": "Paula",
     "dataNascimento": "1987-12-19",
-    "cpf": "12345678900",
+    "cpf": "22236921098",
     "rg": "1234567",
     "periodo": 3,
     "curso": "Farmacia",
@@ -28,7 +28,7 @@
         "logradouro": "rua jardins",
         "numero": "95680",
         "bairro": "flores",
-        "complemtento": "de frente para o parque",
+        "complemento": "de frente para o parque",
         "estado": "GO",
         "cidade": "Santa Rosa de Goiás"
     }

@@ -4,6 +4,8 @@ import com.cadastro.aluno.domain.AlunoDomain;
 import com.cadastro.aluno.repository.AlunoRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CadastroAlunoService {
 
@@ -17,4 +19,7 @@ public class CadastroAlunoService {
         return alunoRepository.save(alunoDomain);
     }
 
+    public List<AlunoDomain> getAluno() {
+        return alunoRepository.findAll();
+    }
 }
